@@ -1,4 +1,8 @@
 <head>
 	<title>{{ .Title }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{ $opts := dict "transpiler" "libsass" }}
+	{{ $scss := resources.Get "sass/global.sass" }}
+	{{ $styles := $scss | resources.ToCSS $opts }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 </head>

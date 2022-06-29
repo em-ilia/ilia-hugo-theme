@@ -1,13 +1,12 @@
-{{ partial "header.html" . }}
 <header><h1>{{ .Title }}</h1></header>
 <article>
+i love shrimp
 {{ .Content }}
 <ul>
-{{ range.Pages }}
+{{ range .Pages }}
 <li>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 </li>
 {{ end }}
 </ul>
 </article>
-{{ partial "footer.html" . }}

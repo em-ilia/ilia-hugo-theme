@@ -1,9 +1,8 @@
-{{ partial "header.html" . }}
 <header>
 	<h1> {{ .Title }} </h1>
-	<h2> Last Modified: {{ .Lastmod}}</h2>
+	<h2> Last Modified: {{ .Lastmod | time.Format ":date_long"}}</h2>
 </header>
 <article>
+have you heard of him?
 {{ .Content }}
 </article>
-{{ partial "footer.html" . }}
