@@ -94,12 +94,16 @@ p
 
 ol
   margin: 0px 0px
+  list-style-type: decimal;
+
+ul
+  list-style-type: none
+  li
+    &:before
+      content: "- "
 
 li
   @extend p
-  list-style-type: none
-  &:before
-    content: "- "
 
 a
   text-decoration: none
