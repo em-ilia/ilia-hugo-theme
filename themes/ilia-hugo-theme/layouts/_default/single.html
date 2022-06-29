@@ -4,7 +4,9 @@
 	<h2> Last Modified: {{ .Lastmod | time.Format ":date_long"}}</h2>
 </header>
 <article>
-have you heard of him?
 {{ .Content }}
 </article>
+<footer>
+	<a href="{{ .Site.BaseURL }}" class="returnLink"><h2>Return</h2></a>
+</footer>
 {{ end }}
