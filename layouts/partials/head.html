@@ -3,7 +3,7 @@
 	<title>{{ .Title }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{{ $opts := dict "transpiler" "libsass" }}
-	{{ $scss := resources.Get "scss/ilia1.sass" }}
+	{{ $scss := resources.Get "scss/ilia1.scss" }}
 	{{ $styles := $scss | resources.ToCSS $opts }}
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 </head>
