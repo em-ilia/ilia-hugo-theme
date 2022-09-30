@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div>
 <header>
 	<h1> {{ .Title }} </h1>
 	<h2> Last Modified: {{ .Lastmod | time.Format ":date_long"}}</h2>
@@ -6,7 +7,8 @@
 <article>
 {{ .Content }}
 </article>
+</div>
 <footer>
-	<a href="{{ .Site.BaseURL }}" class="returnLink"><h2>Return</h2></a>
+	<p><a href="{{ .Site.BaseURL }}" class="returnLink">Return</a></p>
 </footer>
 {{ end }}

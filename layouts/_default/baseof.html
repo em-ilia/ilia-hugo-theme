@@ -1,9 +1,5 @@
 {{- partial "header.html" . -}}
-<div class="outerdiv contentholder">
-	<div class="contentholder__topfiller"></div>
-	<main class="content">
-		{{- block "main" . -}}{{- end -}}
-	</main>
-	<div class="contentholder__topfiller"></div>
-</div>
+<main class="grid-center--offset">
+	{{- block "main" . -}}{{- end -}}
+</main>
 {{- partial "footer.html" . -}}
